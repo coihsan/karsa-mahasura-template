@@ -205,28 +205,28 @@ nav{
   color: #f2f2f2;
 }
 .p1:before{
-  content: url(/images/briefcase-fill.svg);
+  content: url(images/briefcase-fill.svg);
   padding-right: 10px;
   float: left;
   top: -1px;
   bottom: -10px;
 }
 .p2:before{
-  content: url(/images/college.svg);
+  content: url(images/college.svg);
   padding-right: 10px;
   float: left;
   top: -1px;
   bottom: -10px;
 }
 .p3:before{
-  content: url(/images/geo-alt-fill.svg);
+  content: url(images/geo-alt-fill.svg);
   padding-right: 10px;
   float: left;
   top: -1px;
   bottom: -10px;
 }
 .p4:before{
-  content: url(/images/envelope-fill.svg);
+  content: url(images/envelope-fill.svg);
   padding-right: 10px;
   float: left;
   top: -1px;
