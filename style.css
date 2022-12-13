@@ -423,14 +423,14 @@ footer{
   color: var(--Color1);
 }
 .srt1:before{
-  content: url(/images/1-circle-fill.svg);
+  content: url(images/1-circle-fill.svg);
 }
 .srt2::before{
-  content: url(/images/2-circle-fill.svg);
+  content: url(images/2-circle-fill.svg);
   width: 20px;
 }
 .srt3::before{
-  content: url(/images/3-circle-fill.svg);
+  content: url(images/3-circle-fill.svg);
   width: 20px;
 }
 
