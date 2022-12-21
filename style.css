@@ -22,7 +22,7 @@ body, html {
     font-size: 14px;
     box-sizing: border-box;
     background-color: var(--Background);
-    background-image: url(/images/wave.svg);
+    background-image: url(images/wave.svg);
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
 }
@@ -194,7 +194,7 @@ nav{
   height: auto;
   border-radius: 50%;
   text-align: center;
-  mask-image: url(/images/blob.svg);
+  mask-image: url(images/blob.svg);
   mask-size: contain;
 }
 .social{
