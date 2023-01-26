@@ -498,10 +498,10 @@ footer{
   text-transform: uppercase;
 }
 .timeline-content::before{
-  content: url(/images/briefcase-fill.svg);
+  content: url(images/briefcase-fill.svg);
 }
 .timeline-content-school::before{
-  content: url(/images/college.svg);
+  content: url(images/college.svg);
 }
 .timeline-dot{
   width: 15px;
