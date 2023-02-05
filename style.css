@@ -223,6 +223,7 @@ ul{
   color: var(--font-color-text);
   line-height: 1.5;
   flex-wrap: wrap;
+  text-align: center;
 }
 .figure img{
   width: 250px;
@@ -653,7 +654,6 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 20px;
-
   }
   .about-items{
     text-decoration: none;
@@ -678,7 +678,7 @@ footer{
     text-align: center;
   }
   .linked{
-    justify-content: flex-start;
+    justify-content: center;
   }
   .software{
     display: block;
