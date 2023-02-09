@@ -1,5 +1,3 @@
-
-
 :root{
   --Color1: #D7F205;
 
@@ -17,7 +15,7 @@
   --social-icon: #D7F205;
   --social-icon-hover: #6C7526;
 
-  --line-color: #3c3c3c;
+  --line-color: #2d2d2d;
 
   --bg-color-workspace: #D7F205;
 
@@ -156,6 +154,7 @@ ul{
 }
   .icon-box svg{
     background-color: var(--background-card);
+    border: 1px solid var(--line-color);
     color: var(--buttoncolor);
     padding: 15px;
     border-radius: 10px;
@@ -287,6 +286,7 @@ ul{
   justify-content: center;
   gap: 30px;
   background-color: var(--background-card);
+  border: 1px solid var(--line-color);
   padding: 80px;
   border-radius: 10px;
 }
@@ -535,15 +535,18 @@ ul{
     font-weight: 600;
     margin: 10px 0;
     width: fit-content;
-    padding: 2px 7px;
-    color: var(--font-color-text-dark);
-    background-color: var(--bg-color-workspace);
+    padding: 3px 9px;
+    color: var(--buttoncolor);
+    background-color: transparent;
+    border: 1px solid var(--buttoncolor);
     border-radius: 5px;
+    
   }
   .work-experience{
     display: flex;
     /* align-items: flex-start; */
     background-color: var(--background-card);
+    border: 1px solid var(--line-color);
     flex: 3 0 calc(40% - 20px);
     padding: 30px;
     max-width: 300px;
