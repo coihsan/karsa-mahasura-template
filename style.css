@@ -1,4 +1,61 @@
 :root{
+  --Color1: #07F2F2;
+
+  --Background: #021526;
+  --background-card: #1a3363;
+  --font-color-text: #f2f2f2;
+  --font-color-lightgrey: #B6DBF2;
+  --font-color-text-dark: #023059;
+  
+  --buttoncolor: #559BD9;
+  --button-hover: #1B65A6;
+
+  --text-color-hover: #f2f2f2;
+
+  --social-icon: #05DBF2;
+  --social-icon-hover: #559BD9;
+
+  --line-color: #366ABF;
+  --line-color-modal: #295294;
+
+  --bg-color-workspace: #0583F2;
+
+  --background-card-modal: #1a3363;
+
+  --transition: all 0.2s linear 0s;
+
+}
+
+
+
+/* :root{
+  --Color1: #0583F2;
+
+  --Background: #18191a;
+  --background-card: #1f2021;
+  --font-color-text: #f2f2f2;
+  --font-color-lightgrey: #BFBFBF;
+  --font-color-text-dark: #1a1919;
+  
+  --buttoncolor: #0583F2;
+  --button-hover: #056CF2;
+
+  --text-color-hover: #95cdff;
+
+  --social-icon: #0583F2;
+  --social-icon-hover: #056CF2;
+
+  --line-color: #2d2d2d;
+  --line-color-modal: #363636;
+
+  --bg-color-workspace: #0583F2;
+
+  --background-card-modal: #1f2021;
+
+} */
+
+
+/* :root{
   --Color1: #D7F205;
 
   --Background: #171616;
@@ -21,7 +78,7 @@
 
   --background-card-modal: #232323;
 
-}
+} */
 
 
 *{
@@ -33,7 +90,7 @@ body, html {
     padding: 0;
     font-size: 14px;
     box-sizing: border-box;
-    background-color: var(--Background);
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
 }
@@ -52,13 +109,32 @@ li{
   font-size: 2rem;
   font-weight: 600;
   color: var(--Color1);
-  padding-top: 40px;
-  padding-bottom: 10px;
   text-align: center;
-  border-bottom: 6px solid var(--Color1);
-  width: fit-content;
+  padding: 20px;
   margin: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
+.line-style1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 3px;
+  background-color: var(--Color1);
+  margin: 15px auto;
+}
+.line-style2{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 1px;
+  border-bottom: 3px solid var(--Color1);
+  margin: -10px auto;
+}
+
 .subtitle{
   font-size: 14px;
   font-weight: 600;
@@ -67,6 +143,9 @@ li{
 }
 .profile{
   margin-bottom: 40px;
+}
+.hire{
+  color: var(--font-color-text);
 }
 .profile h2{
   color: var(--Color1);
@@ -97,7 +176,7 @@ li{
 .separator{
   height: 1px;
   width: 100%;
-  background-color: var(--line-color);
+  background-color: var(--line-color-modal);
 }
 .separator-pages{
   margin: auto;
@@ -105,12 +184,6 @@ li{
   width: 58%;
   background-color: var(--line-color);
 }
-/* .item-before{
-  padding-right: 5px;
-  width: 1px;
-  height: 1px;
-  background: var(--Orange2);
-} */
 
   /* link */
   .linked{
@@ -119,13 +192,14 @@ li{
     justify-content: center;
     gap: 20px;
     /* padding-top: 30px; */
+    color: var(--font-color-text-dark);
   }
   .link-button{
-    background-color: var(--buttoncolor);
     color: var(--font-color-text-dark);
+    background: linear-gradient(to right, #05DBF2, #559BD9);
     padding: 5px 20px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 5px;
     display: flex;
     align-content: center;
@@ -134,16 +208,13 @@ li{
     cursor: pointer;
     width: max-content;
     text-align: center;
-    /* transition: all 0.2s linear 0s; */
+    transition: all 0.2s linear 0s;
   }
   .link-button:hover{
-    background-color: var(--button-hover);
-    color: var(--text-color-hover);
+    background: linear-gradient(to left, #05DBF2, #559BD9);
+    color: var(--font-color-text);
   }
-  .link-button a{
-    color: var(--font-color-text-dark);
-    font-weight: 700;
-  }
+ 
   li{
     list-style-type: none;
     margin: 0;
@@ -154,8 +225,7 @@ ul{
 }
   .icon-box svg{
     background-color: var(--background-card);
-    border: 1px solid var(--line-color);
-    color: var(--buttoncolor);
+    color: var(--social-icon);
     padding: 15px;
     border-radius: 10px;
     width: 20px;
@@ -173,6 +243,7 @@ ul{
     color: var(--social-icon);
     width: 30px;
     height: auto;
+    transition: var(--transition) ;
   }
   .social-link svg:hover{
     color: var(--social-icon-hover);
@@ -185,26 +256,22 @@ ul{
     margin-bottom: 40px;
   }
   .social a{
-    color: #0D0D0D;
+    color: var(--font-color-text-dark);
   }
 /* global style */
 
-/* .header{
-  display: table-cell;
+.header{
+  display: block;
+  margin: auto;
   vertical-align: middle;
+  margin-top: 40px;
   height: 100vh;
-} */
-.hire.span:hover{
-  content: 'Tetx';
 }
 .about-body{
   margin: 40px auto;
   max-width: 700px;
 }
-.about-container{
-  display: block;
-  margin: auto;
-}
+
 .profile{
   padding: 30px;
   display: flex;
@@ -269,7 +336,7 @@ ul{
 }
 /* end */
 .services-section{
-  margin: auto;
+  margin: 40px auto;
 }
 .services-card{
   max-width: 600px;
@@ -286,14 +353,13 @@ ul{
   justify-content: center;
   gap: 30px;
   background-color: var(--background-card);
-  border: 1px solid var(--line-color);
   padding: 80px;
   border-radius: 10px;
 }
 .services-title{
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--Color1);
+  color: var(--font-color-text);
 }
 .services-icon svg{
   color: var(--Color1);
@@ -306,13 +372,13 @@ ul{
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  background-color: var(--buttoncolor);
-  font-weight: 600;
+  background: linear-gradient(to right, #05DBF2, #559BD9);
   color: var(--font-color-text-dark);
+  transition: var(--transition);
 }
 .services-button:hover{
-  background-color: var(--button-hover);
-  color: var(--font-color-text-dark);
+  background: linear-gradient(to left, #05DBF2, #559BD9);
+  color: var(--text-color-hover);
 }
 .tools-list{
   display: flex;
@@ -326,7 +392,7 @@ ul{
   gap: 10px;
 }
 .tools-item-icon{
-  color: var(--buttoncolor);
+  color: var(--social-icon);
 }
 .header-footer{
   display: flex;
@@ -340,7 +406,7 @@ ul{
   gap: 10px;
 }
 .header-footer-container-title, .header-footer-container >svg{
-  color: var(--font-color-lightgrey);
+  color: #D5E7F2;
 }
 .modal-body-item{
   display: flex;
@@ -350,7 +416,7 @@ ul{
   margin-left: -30px;
 }
 .modal-body-item >svg{
-  color: var(--buttoncolor);
+  color: var(--social-icon);
 }
           /* The Modal (background) */
         .modal {
@@ -372,7 +438,7 @@ ul{
           /* Enable scroll if needed */
           background-color: rgb(0, 0, 0);
           /* Fallback color */
-          background-color: rgba(0, 0, 0, 0.7);
+          background-color: rgba(0, 0, 0, 0.4);
           /* Black w/ opacity */
           overflow: auto;
       }
@@ -420,7 +486,7 @@ ul{
 
       /* The Close Button */
       .close {
-          color: var(--buttoncolor);
+          color: var(--social-icon);
           float: right;
           font-size: 28px;
           font-weight: bold;
@@ -428,7 +494,7 @@ ul{
 
       .close:hover,
       .close:focus {
-          color: var(--button-hover);
+          color: var(--social-icon-hover);
           text-decoration: none;
           cursor: pointer;
       }
@@ -535,18 +601,22 @@ ul{
     font-weight: 600;
     margin: 10px 0;
     width: fit-content;
-    padding: 3px 9px;
-    color: var(--buttoncolor);
-    background-color: transparent;
-    border: 1px solid var(--buttoncolor);
-    border-radius: 5px;
-    
+    color: var(--font-color-text);
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .work-place::before{
+    content: url(/images/building.svg);
+    width: 16px;
+    height: 16px;
+    filter: invert(100);
+
+    margin-right: 10px;
   }
   .work-experience{
     display: flex;
-    /* align-items: flex-start; */
     background-color: var(--background-card);
-    border: 1px solid var(--line-color);
     flex: 3 0 calc(40% - 20px);
     padding: 30px;
     max-width: 300px;
@@ -575,7 +645,7 @@ ul{
 
         /* jobdesk modal */
         .uil-check-circle{
-          color: var(--buttoncolor);
+          color: var(--social-icon);
           font-size: 1.5rem;
         }
 
@@ -597,12 +667,12 @@ ul{
           border: none;
           cursor: pointer;
           border-radius: 5px;
-          background-color: var(--buttoncolor);
-          font-weight: 600;
+          background: linear-gradient(to right, #05DBF2, #559BD9);
           color: var(--font-color-text-dark);
+          transition: var(--transition);
         }
         .services-button-jobdesk:hover{
-          background-color: var(--button-hover);
+          background: linear-gradient(to left, #05DBF2, #559BD9);
           color: var(--text-color-hover);
         }
 
@@ -635,17 +705,17 @@ footer{
   display: flex;
   align-items: center;
   gap: 5px;
-  background-color: var(--buttoncolor);
-  color: var(--background-card);
+  background: linear-gradient(to right, #05DBF2, #559BD9);
+  color: var(--font-color-text-dark);
   width: max-content;
   padding: 5px 10px;
-  font-weight: 600;
   border-radius: 5px;
   font-size: 1rem;
+  transition: var(--transition);
 }
 
 .icon-link-sertifikat:hover{
-  background-color: var(--button-hover);
+  background: linear-gradient(to left, #05DBF2, #559BD9);
   color: var(--font-color-text);
 }
 /* end */
