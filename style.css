@@ -560,7 +560,7 @@ ul{
     border-radius: 20px;
   }
   .work-place::before{
-    content: url(/images/building.svg);
+    content: url(images/building.svg);
 
     width: 16px;
     height: 16px;
