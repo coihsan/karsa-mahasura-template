@@ -1,11 +1,11 @@
 :root{
-  --Color1: #07F2F2;
+  --Color1: #08C5FF;
 
   --Background: #021526;
-  --background-card: #1a3363;
+  --background-card: #20324d;
   --font-color-text: #f2f2f2;
   --font-color-lightgrey: #B6DBF2;
-  --font-color-text-dark: #023059;
+  --font-color-text-dark: #0F172A;
   
   --buttoncolor: #559BD9;
   --button-hover: #1B65A6;
@@ -15,70 +15,16 @@
   --social-icon: #05DBF2;
   --social-icon-hover: #559BD9;
 
-  --line-color: #366ABF;
-  --line-color-modal: #295294;
+  --line-color: #03658C;
+  --line-color-modal: #808EA3;
 
   --bg-color-workspace: #0583F2;
 
-  --background-card-modal: #1a3363;
+  --background-card-modal: #212B3F;
 
   --transition: all 0.2s linear 0s;
 
 }
-
-
-
-/* :root{
-  --Color1: #0583F2;
-
-  --Background: #18191a;
-  --background-card: #1f2021;
-  --font-color-text: #f2f2f2;
-  --font-color-lightgrey: #BFBFBF;
-  --font-color-text-dark: #1a1919;
-  
-  --buttoncolor: #0583F2;
-  --button-hover: #056CF2;
-
-  --text-color-hover: #95cdff;
-
-  --social-icon: #0583F2;
-  --social-icon-hover: #056CF2;
-
-  --line-color: #2d2d2d;
-  --line-color-modal: #363636;
-
-  --bg-color-workspace: #0583F2;
-
-  --background-card-modal: #1f2021;
-
-} */
-
-
-/* :root{
-  --Color1: #D7F205;
-
-  --Background: #171616;
-  --background-card: #1e1e1e;
-  --font-color-text: #f2f2f2;
-  --font-color-lightgrey: #BFBFBF;
-  --font-color-text-dark: #1a1919;
-  
-  --buttoncolor: #D7F205;
-  --button-hover: #a7c101;
-
-  --text-color-hover: #282B0E;
-
-  --social-icon: #D7F205;
-  --social-icon-hover: #6C7526;
-
-  --line-color: #2d2d2d;
-
-  --bg-color-workspace: #D7F205;
-
-  --background-card-modal: #232323;
-
-} */
 
 
 *{
@@ -90,8 +36,7 @@ body, html {
     padding: 0;
     font-size: 14px;
     box-sizing: border-box;
-    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-    background-repeat: no-repeat;
+    background: radial-gradient(circle at 53% 2%,#091121, #131d32, #212b3f);
     font-family: 'Poppins', sans-serif;
 }
 a{
@@ -120,19 +65,21 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 120px;
   height: 3px;
   background-color: var(--Color1);
   margin: 15px auto;
+  border-radius: 10px;
 }
 .line-style2{
   display: block;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 70px;
   height: 1px;
   border-bottom: 3px solid var(--Color1);
   margin: -10px auto;
+  border-radius: 10px;
 }
 
 .subtitle{
@@ -212,7 +159,7 @@ li{
   }
   .link-button:hover{
     background: linear-gradient(to left, #05DBF2, #559BD9);
-    color: var(--font-color-text);
+    color: var(--text-color-hover);
   }
  
   li{
@@ -261,10 +208,10 @@ ul{
 /* global style */
 
 .header{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
-  vertical-align: middle;
-  margin-top: 40px;
   height: 100vh;
 }
 .about-body{
@@ -352,9 +299,13 @@ ul{
   align-items: center;
   justify-content: center;
   gap: 30px;
-  background-color: var(--background-card);
+  background: var(--background-card);
   padding: 80px;
   border-radius: 10px;
+  transition: var(--transition);
+}
+.services-body:hover{
+  background-color: #368ABF;
 }
 .services-title{
   font-size: 1.5rem;
@@ -451,7 +402,7 @@ ul{
           background-color: var(--background-card-modal);
           border-radius: 10px;
           margin: auto;
-          padding: 20px;
+          padding: 30px;
           width: 40%;
           -webkit-animation-name: animatetop;
           -webkit-animation-duration: 0.3s;
@@ -489,7 +440,7 @@ ul{
           color: var(--social-icon);
           float: right;
           font-size: 28px;
-          font-weight: bold;
+          font-weight: bolder;
       }
 
       .close:hover,
@@ -597,22 +548,23 @@ ul{
     padding-top: 5px;
   }
   .work-place{
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
     margin: 10px 0;
     width: fit-content;
-    color: var(--font-color-text);
+    color: #07C7F2;
     position: relative;
     display: flex;
     align-items: center;
+    background-color: #022840;
+    padding: 5px 15px;
+    border-radius: 20px;
   }
   .work-place::before{
-    content: url(images/building.svg);
+    content: url(/images/building.svg);
+
     width: 16px;
     height: 16px;
-    filter: invert(100);
-
-    margin-right: 10px;
+    margin-right: 5px;
   }
   .work-experience{
     display: flex;
@@ -621,6 +573,10 @@ ul{
     padding: 30px;
     max-width: 300px;
     border-radius: 10px;
+    transition: var(--transition);
+  }
+  .work-experience:hover{
+    background-color: #368ABF;
   }
   .work-experience-container{
     padding-left: 20px;
