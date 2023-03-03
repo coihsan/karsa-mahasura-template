@@ -4,7 +4,7 @@
   --Background: #121212;
   --background-card: #181818;
   --font-color-text: #f2f2f2;
-  --font-color-lightgrey: #727272;
+  --font-color-lightgrey: #a9a9a9;
   --font-color-text-dark: #181818;
   
   --buttoncolor: #85F200;
@@ -644,7 +644,7 @@ footer{
   display: flex;
   align-items: center;
   gap: 5px;
-  background: linear-gradient(to right, #05DBF2, #559BD9);
+  background-color: var(--buttoncolor);
   color: var(--font-color-text-dark);
   width: max-content;
   padding: 5px 10px;
@@ -654,7 +654,7 @@ footer{
 }
 
 .icon-link-sertifikat:hover{
-  background: linear-gradient(to left, #05DBF2, #559BD9);
+  background-color: var(--button-hover);
   color: var(--font-color-text);
 }
 /* end */
