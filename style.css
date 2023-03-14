@@ -2,17 +2,20 @@
 :root{
   /* green color */
 
-    /* --primary-color: #999771;
-    --secondary-color: #737155; */
+    /* --primary-color: #F2CB05;
+    --secondary-color: #D9B504; */
 
+    --primary-color: #F2CE16;
+    --secondary-color: #DBBA14;
 
-      --primary-color: #A60D36;
-      --secondary-color: #8d0c2e;
+      /* default */
+      /* --primary-color: #A60D36;
+      --secondary-color: #8d0c2e; */
 
 
     --Bg-color: #0C0C0C;
     --dark-color-section: #090808;
-    --body-text: #D9D9D9;
+    --body-text: #f2f2f2;
     --font-color-grey: #979797;
     --stroke: #333333;
 
@@ -215,7 +218,7 @@ button{
 }
 .open-modal {
   font-weight: bold;
-  color: var(--body-text);
+  color: var(--dark-color-500);
   border-radius: 20px;
   width: max-content;
   cursor: pointer;
@@ -393,7 +396,7 @@ nav{
 .navbar ul li{
   display: flex;
 }
-.navmenu li a{
+.navmenu li a:not(:nth-child(6)){
   color: #f2f2f2;
   font-size: 1rem;
 }
@@ -439,15 +442,14 @@ nav{
   transform: translateY(-3px);
   cursor: pointer;
 }
-.navbar ul .hire{
-  background-color: var(--primary-color);
-  padding: 5px 12px;
-  border-radius: 5px;
-  border: none;
+.navbar ul .button-effects >a{
+  color: var(--dark-color-500);
+  font-weight: 500;
 }
-.navbar ul .hire a{
-  color: var(--body-text);
+.navbar ul .button-effects >i{
+  color: var(--dark-color-500);
 }
+
 .logo{
   font-size: 1.7rem;
   font-weight: 700;
@@ -481,6 +483,7 @@ nav{
     padding: 0 10px;
     margin: 0;
     border-radius: 5px;
+    color: var(--dark-color-500);
 }
 .say-hello-contain{
   display: flex;
@@ -535,17 +538,20 @@ nav{
 .cv, .hire{
     color: var(--body-text);
     transition: var(--transition);
+    font-weight: bold;
 }
 .cv{
   background-color: var(--secondary-color);
+  color: var(--dark-color-500);
 }
 .cv:hover, .hire:hover{
     background-color: var(--secondary-color);
-    color: var(--body-text);
     transform: var(--transform);
     font-weight: bolder;
 }
-
+.hire:hover{
+  color: var(--dark-color-500);
+}
 /* end hero */
 
 .foto-profil img{
@@ -947,7 +953,7 @@ nav{
   background-color: var(--secondary-color);
   height: 40px;
   width: 100%;
-  color: var(--body-text);
+  color: var(--dark-color-500);
   margin: 0 auto;
   border: none;
   border-radius: 20px;
