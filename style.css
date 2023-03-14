@@ -693,7 +693,7 @@ nav{
 .progress-bar-contain{
   width: 280px;
   height: 30px;
-  background-image: url(/img/circle-grey.svg);
+  background-image: url(img/circle-grey.svg);
   background-origin: content-box;
   background-repeat: space;
   margin-top: 15px;
@@ -701,7 +701,7 @@ nav{
 .progress-bar-fill{
   width: 280px;
   height: 30px;
-  background-image: url(/img/circle-fill.svg);
+  background-image: url(img/circle-fill.svg);
   background-origin: content-box;
   background-repeat: repeat-x;
 
