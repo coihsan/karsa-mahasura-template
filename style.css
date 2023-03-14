@@ -1284,6 +1284,9 @@ input::-webkit-inner-spin-button {
     .skills-set-container{
       grid-template-columns: repeat(2, 1fr);
     }
+    .skills-card h3{
+      font-size: 1rem;
+    }
     /* end */
 
     .resume-section{
