@@ -821,6 +821,7 @@ nav{
 .resume-box{
   position: relative;
   display: block;
+  margin-left: 20px;
 }
 .div1 { grid-area: 1 / 1 / 2 / 2; }
 .div2 { grid-area: 1 / 2 / 2 / 3; }
@@ -835,8 +836,8 @@ nav{
   border: 1px solid var(--stroke);
   padding: 10px;
   border-radius: 10px;
+  margin-left: 0;
 }
-
 .resume-box:not(:nth-child(8)):before{
   content: '';
   position: absolute;
@@ -845,7 +846,10 @@ nav{
   background-color: var(--primary-color);
   border-radius: 50%;
   top: 7px;
-  left: -20px;
+  left: -30px;
+}
+.resume-box:nth-child(1)::before{
+  background-color: #5DC97C;
 }
 .date-histori{
   display: flex;
