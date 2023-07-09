@@ -47,7 +47,14 @@ function reveal() {
 }
 window.addEventListener("scroll", reveal);
 
+// form
 
+const inputField = document.getElementById("name");
+
+  inputField.addEventListener('input', function(){
+    const userInput = inputField.ariaValueMax;
+    alert("I'm sorry, the contact form is not available at the moment!");
+  })
   // navbar
 
   const MenuToggle = document.querySelector(".menu-toggle");
@@ -55,4 +62,29 @@ window.addEventListener("scroll", reveal);
 
         MenuToggle.addEventListener("click", function() {
             nav.classList.toggle("slide");
-        })
+        });
+
+// slider card
+
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+const slider = document.querySelector('.progress-bar-div');
+let startX = null;
+
+slider.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchmove', e => {
+  if (startX) {
+    const diffX = startX - e.touches[0].clientX;
+    slider.scrollLeft += diffX;
+    startX = e.touches[0].clientX;
+  }
+});
+
+slider.addEventListener('touchend', () => {
+  startX = null;
+});
+
