@@ -496,6 +496,20 @@ nav{
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 20px;
 }
+.greetings >.green-text{
+  font-weight: 600;
+}
+.greetings{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  background-color: #1F263E;
+  width: max-content;
+  margin: 0 auto;
+  padding: 1px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
 .title-name{
     font-size: 2rem;
     font-weight: 900;
