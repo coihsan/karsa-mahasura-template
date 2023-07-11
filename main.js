@@ -1,3 +1,21 @@
+// greeting
+
+const date = new Date();
+const hour = date.getHours();
+
+let greeting;
+
+if (hour >= 0 && hour < 12) {
+  greeting = "Morning!";
+} else if (hour >= 12 && hour < 18) {
+  greeting = "Afternoon!";
+} else {
+  greeting = "Evening!";
+};
+document.getElementById("greeting").innerHTML = greeting;
+
+
+// Modal 
 const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
