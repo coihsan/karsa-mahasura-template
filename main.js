@@ -1,18 +1,22 @@
 // greeting
 
-const date = new Date();
-const hour = date.getHours();
-
+let hour = new Date().getHours();
 let greeting;
-
-if (hour >= 0 && hour < 12) {
-  greeting = "Morning!";
-} else if (hour >= 12 && hour < 18) {
-  greeting = "Afternoon!";
-} else {
-  greeting = "Evening!";
-};
-document.getElementById("greeting").innerHTML = greeting;
+  
+  if (hour >= 0 && hour < 11) {
+   greeting = "Good Morning";
+  }
+  else if (hour >= 11 && hour < 13) {
+   greeting = "Good Day"
+  }
+  else if (hour >= 13 && hour < 18) {
+   greeting = "Good Afternoon"
+  }
+  else {
+   greeting = "Good Evening";
+  }
+  document.getElementById("demo5").innerHTML = greeting;
+  
 
 
 // Modal 
