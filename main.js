@@ -15,7 +15,7 @@ let greeting;
   else {
    greeting = "Good Evening";
   }
-  document.getElementById("greetings").innerHTML = greeting;
+  document.getElementById("greeting").innerHTML = greeting;
   
 
 
