@@ -4,16 +4,16 @@ let hour = new Date().getHours();
 let greeting;
   
   if (hour >= 0 && hour < 11) {
-   greeting = "Good Morning";
+   greeting = "Morning!";
   }
   else if (hour >= 11 && hour < 13) {
-   greeting = "Good Day"
+   greeting = "Day!"
   }
   else if (hour >= 13 && hour < 18) {
-   greeting = "Good Afternoon"
+   greeting = "Afternoon!"
   }
   else {
-   greeting = "Good Evening";
+   greeting = "Evening!";
   }
   document.getElementById("greeting").innerHTML = greeting;
   
