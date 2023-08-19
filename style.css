@@ -65,7 +65,6 @@ button{
 }
 .button-social{
   transition: var(--bounceEasing);
-  background-color: #191e35;
   padding: 3px;
   border-radius: 3px;
 }
@@ -392,11 +391,14 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px;
-  background-color: var(--dark-color-600);
+  padding: 1rem 15%;
+  transition: var(--transition);
   z-index: 200;
   position: fixed;
   width: 100%;
+}
+nav.scrolled{
+  background-color: var(--dark-color-600);
 }
 .menu-toggle{
   display: none;
@@ -406,7 +408,9 @@ nav{
   align-items: center;
   vertical-align: middle;
   gap: 25px;
-  background-color: var(--dark-color-600);
+}
+.navbar .navmenu .social-links{
+  display: none;
 }
 .navbar ul li{
   display: flex;
@@ -467,7 +471,7 @@ nav{
 
 .logo{
   font-size: 1.7rem;
-  font-weight: 700;
+  font-weight: 900;
   user-select: none;
   font-family: 'Orbitron', sans-serif;
 }
@@ -477,17 +481,38 @@ nav{
     display: flex;
     margin: auto;
     height: 100vh;
-    background: radial-gradient(circle at 99% 0%, rgba(31, 38, 62, 1) 0%, rgba(8, 10, 18, 1) 70%);
+    background-image: url(img/3409295.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* background: radial-gradient(circle at 99% 0%, rgba(31, 38, 62, 1) 0%, rgba(8, 10, 18, 1) 70%); */
     /* background: linear-gradient(35deg, rgba(8, 10, 18, 1) 0%, rgba(31, 38, 62, 1) 130%); */
+  }
+  .hero-section::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(10, 12, 22, 1) 10%, rgba(10, 12, 22, 0.4) 100%);
   }
 .hero-container{
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 .hero-section .hero-container .hero-title > figure{
+  display: flex;
   margin-bottom: 20px;
+}
+.hero-section .hero-container .hero-title figure img{
+  max-width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 158px rgba(61, 123, 248, 0.4);
 }
 .hero-section .hero-container > .social-links{
   margin-top: 20px;
@@ -503,7 +528,7 @@ nav{
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
-  background-color: #1F263E;
+  background-color: rgba(255, 255, 255, 0.099);
   width: max-content;
   margin: 0 auto;
   padding: 1px 15px;
@@ -511,14 +536,14 @@ nav{
   margin-bottom: 10px;
 }
 .title-name{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 1px 1px 4px #0F121F;
 }
 .title-job{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight:600;
     text-transform: uppercase;
     line-height: 1;
@@ -593,6 +618,7 @@ nav{
 }
 .aboutme-description{
   line-height: 1.6;
+  color: #9ca3af;
 }
 .aboutme-title{
   font-size: 2rem;
@@ -845,7 +871,7 @@ nav{
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #f75a5a;
+  background-color: #334155;
   border-radius: 50%;
   top: 7px;
   left: -30px;
@@ -1175,19 +1201,19 @@ input::-webkit-inner-spin-button {
     width: 100%;
     position: fixed;
 }
-.navbar ul{
+.navbar .navmenu{
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100vh;
     width: 60%;
-    margin-top: 20px;
     padding: 0 20px;
     padding-top: 50px;
     padding-bottom: 170px;
-    transform: translateX(150%);
+    transform: translateX(-150%);
+    background-color: var(--dark-color-600);
     transition:transform 0.5s cubic-bezier(1,0,0,1) 0s;
     /* transition: transform 0.50s ease-in-out; */
 }
@@ -1195,7 +1221,7 @@ input::-webkit-inner-spin-button {
   animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-up both;
 }
 .navbar ul.slide{
-    transform: translateX(0);
+    transform: translate(0);
 }
 .navmenu li a{
   font-size: 1.1rem;
@@ -1212,12 +1238,16 @@ input::-webkit-inner-spin-button {
 .menu-toggle, .social-links{
     display: block;
 }
+.navbar .navmenu .social-links{
+  display: block;
+}
 .contact-info{
   flex-direction: column;
 }
 .contact-body figure::before{
   background-image: none;
 }
+
 /* ======= Data Animation Toggle ======= */
 
     .menu-toggle .hamburger .line1 {
