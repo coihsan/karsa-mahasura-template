@@ -1,9 +1,8 @@
 // greeting
-
 let hour = new Date().getHours();
 let greeting;
   
-  if (hour >= 0 && hour < 11) {
+  if (hour >= 4 && hour < 11) {
    greeting = "Morning!";
   }
   else if (hour >= 11 && hour < 13) {
@@ -16,8 +15,17 @@ let greeting;
    greeting = "Evening!";
   }
   document.getElementById("greeting").innerHTML = greeting;
-  
 
+  // When the user scroll changging background the navbar
+
+  window.addEventListener('scroll', function(){
+    var scrollY = this.window.scrollY;
+    if (scrollY > 100){
+      this.document.querySelector('nav').classList.add('scrolled');
+    } else {
+      this.document.querySelector('nav').classList.remove('scrolled');
+    }
+  })
 
 // Modal 
 const openEls = document.querySelectorAll("[data-open]");
@@ -79,12 +87,22 @@ const inputField = document.getElementById("name");
   })
   // navbar
 
-  const MenuToggle = document.querySelector(".menu-toggle");
-        const nav = document.querySelector("nav ul");
 
-        MenuToggle.addEventListener("click", function() {
-            nav.classList.toggle("slide");
-        });
+ {
+      const MenuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav ul");
+      const navOff = ".navbar ul.slide"
+
+      MenuToggle.addEventListener("click", function() {
+          nav.classList.toggle("slide");
+      });
+
+      MenuToggle.addEventListener('click', ss => {
+       if (ss.target == document.querySelector(".navbar ul.slide")) {
+        document.querySelector(".navbar ul.slide").classList.remove("slide");
+       }
+      })
+    }
 
 // slider card
 
