@@ -35,7 +35,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav class="navbar">
     <div class="logo">co.<span class="green-text">ihsan</span></div>
-    <ul class="navmenu">  
+    <div class="navOverlay" id="navOverlay"></div>
+    <ul class="navmenu" id="navmenu">  
         <li>
             <i class='bx bx-home-alt-2 icon'></i>
             <a href="#" class="active" data-hover="Home">Home</a>
@@ -57,7 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="#contact" data-hover="Contact">Contact</a>
         </li>
         <li class="button-effects">
-          <i class="uil uil-document-layout-left icon"></i>
+          <i class="uil uil-file-share-alt icon"></i>
           <a target="_blank" href="https://drive.google.com/drive/folders/1daKiXh56SeyZbn10-h5kVTA12W8vYAkd?usp=share_link" data-hover="Portofolio">Portofolio</a>
       </li>
         <div class="social-links">
@@ -68,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </ul>
    <div class="menu-toggle">
-        <input type="checkbox" class="toggle-nav" id="toggle">
+        <input type="checkbox" class="toggle-nav" id="toggle-checkbox">
             <div class="hamburger">
                 <span class="line line1"></span>
                 <span class="line line2"></span>
@@ -333,9 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="list-platform-container">
                 <h4>/Certificate</h4>
                 <ul class="list-platform">
-                  <li class="platform-item-certificate"><a target="_blank" href="https://skillshop.exceedlms.com/profiles/038b28dd54cb4f11bd4668684c05e95f"><i class='bx bx-link-external'></i> Google Ads Search</a></li>
-                  <li class="platform-item-certificate"><a target="_blank" href="https://skillshop.exceedlms.com/profiles/038b28dd54cb4f11bd4668684c05e95f"><i class='bx bx-link-external'></i> Google Ads Display</a></li>
-                  <li class="platform-item-certificate"><a target="_blank" href="https://skillshop.exceedlms.com/profiles/038b28dd54cb4f11bd4668684c05e95f"><i class='bx bx-link-external'></i> Google Ads Shopping</a></li>
+                  <li class="platform-item-certificate"><a target="_blank" href="https://sgq.io/Pxoojrj"><i class='bx bx-link-external'></i> Google Ads</a></li>
                   <li class="platform-item-certificate"><a target="_blank" href="https://drive.google.com/file/d/1gl1a4D3vs0xpZADVJnhhyxu9sU4MST7U/view?usp=share_link"><i class='bx bx-link-external'></i> Digital Marketing by Skill Academy</a></li>
                 </ul>
                 <hr>
@@ -450,44 +449,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         </div>
 
-        <div class="container">
-        <div class="form-title">Contact Me</div>
-            <form method="post" action="contact.php" class="form">
-
-                <fieldset class="fieldset" id="myFieldset">
-                    <legend id="myLegend">Your Name</legend>
-                    <div class="form-container">
-                        
-                        <input type="text" name="name" id="name" placeholder="Jhonny" required>
-                        <i class='bx bx-user'></i>
-                    </div>
-                </fieldset>
-                <br>
-                <fieldset id="myFieldset">
-                    <legend id="myLegend">E-Mail Address</legend>
-                    <div class="form-container">
-                        <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
-                        <i class='bx bx-envelope'></i>
-                    </div>
-                </fieldset>
-                <br>
-                <fieldset id="myFieldset">
-                    <legend id="myLegend">Phone Number</legend>
-                    <div class="form-container">
-                        <input type="number" name="telephone" id="number" placeholder="+62 812 3456 7890" required>
-                        <i class='bx bx-phone' ></i>
-                    </div>
-                </fieldset>
-                <br>
-                <fieldset id="myFieldset">
-                    <legend id="myLegend">Message</legend>
-                    <div class="form-container">
-                        <textarea name="message" id="message_validation" cols="30" rows="10" placeholder="Enter your message..."></textarea>                    </div>
-                </fieldset>
-                <br>
-                <button type="submit" class="button-effects" disabled>Send</button>
-            </form>
-    </div>
+        <div class="form-section">
+          <form action="" class="form-container">
+              <h3>Contact Me</h3>
+              <div class="input-group">
+                  <input type="text" name="" id="name" placeholder="Jhonny" class="user-input">
+                  <i class='bx bx-user'></i>
+                  <label for="" class="user-lable">Your Name</label>
+              </div>
+              <br>
+              <div class="input-group">
+                  <input type="email" name="" id="" placeholder="jhonny@gmail.com">
+                  <i class='bx bx-envelope' ></i>
+                  <label for="" class="user-lable">E-Mail Address</label>
+              </div>
+              <br>
+              <div class="input-group">
+                   <input type="number" name="" id="" placeholder="+62 812 2345 6789"><i class='bx bxs-phone' ></i>
+                   <label for="" class="user-lable">Phone Number</label>
+              </div>
+              <br>
+             <div class="input-group">
+                  <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                  <label for="" class="user-lable">Message</label>
+             </div>
+             <input type="submit" value="Send">
+          </form>
+      </div>
 
       </div>
     </section>
