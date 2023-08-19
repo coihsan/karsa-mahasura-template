@@ -88,21 +88,28 @@ const inputField = document.getElementById("name");
   // navbar
 
 
- {
-      const MenuToggle = document.querySelector(".menu-toggle");
-      const nav = document.querySelector("nav ul");
-      const navOff = ".navbar ul.slide"
+{
+ const navMenu = document.getElementById('navmenu');
+ const toggleCheckbox = document.getElementById('toggle-checkbox');
+ const navOverlay = document.getElementById('navOverlay');
 
-      MenuToggle.addEventListener("click", function() {
-          nav.classList.toggle("slide");
-      });
-
-      MenuToggle.addEventListener('click', ss => {
-       if (ss.target == document.querySelector(".navbar ul.slide")) {
-        document.querySelector(".navbar ul.slide").classList.remove("slide");
-       }
-      })
-    }
+    toggleCheckbox.addEventListener('click', function(){
+      if (toggleCheckbox.checked){
+        navMenu.classList.add('slide');
+        navOverlay.classList.add('active');
+      } else {
+        navMenu.classList.remove('slide');
+        navOverlay.classList.remove('active');
+      }
+    });
+    document.addEventListener('click', (event) =>{
+      if (!event.target.closest('#toggle-checkbox')){
+        toggleCheckbox.checked = false;
+        navMenu.classList.remove('slide');
+        navOverlay.classList.remove('active');
+      }
+    })
+}
 
 // slider card
 
