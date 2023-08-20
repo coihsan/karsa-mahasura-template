@@ -493,12 +493,12 @@ nav.scrolled{
     left: 0;
     width: 100%;
     height: 100%;
-    background: -moz-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0) 100%); 
-    background: -webkit-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0) 100%);
-    background: -o-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0) 100%);
+    background: -moz-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0.5) 100%); 
+    background: -webkit-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0.5) 100%);
+    background: -o-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0.5) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#080A12', endColorstr='#080A12', GradientType=1 );
-    background: -ms-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0) 100%);
-    background: linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0) 100%);
+    background: -ms-linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0.5) 100%);
+    background: linear-gradient(0deg, rgba(8, 10, 18, 1) 0%, rgba(8, 10, 18, 0.5) 100%);
   }
 .hero-container{
     margin: auto;
@@ -629,11 +629,19 @@ nav.scrolled{
   letter-spacing: 3px;
   font-family: 'Orbitron', sans-serif;
 }
-.aboutme-signature{
-  font-family: mySignatureFont;
-  font-size: 3rem;
+.aboutme-certificate{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
 }
-
+.aboutme-certificate img{
+  max-width: 130px;
+}
+.aboutme-certificate em{
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
 /* personal details modal */
 
 .modal-content-personal-details{
