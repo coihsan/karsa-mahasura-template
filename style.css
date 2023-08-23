@@ -629,18 +629,47 @@ nav.scrolled{
   letter-spacing: 3px;
   font-family: 'Orbitron', sans-serif;
 }
-.aboutme-certificate{
-  display: flex;
-  flex-direction: column;
+.figuregoogle{
+  position: relative;
+  width: 35px;
+}
+.figuregoogle::after{
+  position: absolute;
+  content: url(img/bxs-badge-check.svg);
+  display: block;
+  top: -11px;
+  right: -8px;
+  width: 25px;
+  height: 25px;
+  color: #2c90d8;
+}
+.certificate-body{
   gap: 10px;
-  justify-content: center;
 }
-.aboutme-certificate img{
-  max-width: 130px;
+.aboutme-certificate p{
+  margin-bottom: 5px;
 }
-.aboutme-certificate em{
-  font-size: 0.8rem;
+.certificate-body img{
+  width: 30px;
+  height: auto;
+  position: relative;
+}
+.certificate-body a{
+  color: #2c90d8;
+  text-decoration: underline;
+}
+.certificate-body small, 
+.certificate-body i{
   color: #9ca3af;
+}
+.certificate-body,
+.skillshop,
+.accredible{
+  display: flex;
+  align-items: center;
+}
+.skillshop, .accredible{
+  gap: 10px;
 }
 /* personal details modal */
 
