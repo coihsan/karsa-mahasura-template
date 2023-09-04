@@ -142,22 +142,7 @@ body{
     animation-duration: 1.5s;
   }
 /* GLOBAL STYLING */
-#loader-content{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    transform: translate(0%);
-    opacity: 1;
-    visibility: visible;
-}
-#loader-content.active{
-    background-color: #171717;
-    z-index: 1000;
-    transition: var(--transition);
-    transform: translateY(-150%);
-    opacity: 0;
-    visibility: hidden;
-}
+
 ::selection{
     background-color: var(--body-font-color);
     color: var(--body-color);
