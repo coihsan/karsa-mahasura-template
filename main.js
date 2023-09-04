@@ -1,12 +1,4 @@
-// LOADER
 
-document.addEventListener('DOMContentLoaded', function(){
-    setTimeout(showContent,4000);
-})
-function showContent(){
-    document.getElementById('loader-content').classList.add('active');
-
-}
 
 // NAVMENU
 {
@@ -56,18 +48,16 @@ const sidenavClose = document.getElementById("button-close-sidenav");
 const time = new Date().getHours();
 let greeting;
 
-if (time > 4 && time <= 11){
+if (time >= 4 && time < 11) {
     greeting = "Good Morning!";
-}
-else if (time >= 11 && time < 14 ) {
-    greeting = "Good Afternoon!"
-}
-else if (time > 14 && time <= 17.59){
+} else if (time === 11 && time < 14) {
+    greeting = "Good Day!";
+} else if (time >= 11 && time < 18) {
     greeting = "Good Afternoon!";
+} else {
+    greeting = "Good Evening!";
 }
-else {
-    greeting = "Good Evening!"
-}
+
 document.getElementById('greeting').innerHTML = greeting;
 
 // WHEN THE USER SCROLL DOWN THE NAVBAR CHANGING BACKGROUND COLOR
