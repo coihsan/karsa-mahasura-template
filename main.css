@@ -168,7 +168,7 @@ body{
 .title-section{
     font-size: 2.3rem;
     color: var(--primary-color);
-    font-family: var(--fs-family-orbitron);
+    font-family: 'Chakra Petch', sans-serif;
     margin-left: 20px;
     line-height: 1;
 }
@@ -178,7 +178,7 @@ body{
     background-color: var(--body-font-grey);
 }
 .subtitle-section{
-    font-family: var(--fs-family-orbitron);
+    font-family: 'Chakra Petch', sans-serif;
 }
 .flex{
     display: flex;
@@ -207,6 +207,12 @@ body{
 .hover-icon:hover{
     color: #264de4;
     transform: scale(0.97);
+}
+.hr-style{
+    outline: none;
+    background-color: rgba(71, 71, 71, 0.3);
+    width: 100%;
+    height: 1px;
 }
 /* CONTENT STYLING */
 
@@ -370,15 +376,15 @@ body{
 .navmenu-header img{
     max-width: 80px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .navmenu-header .title-name,
 .navmenu-header .title-job{
-    font-family: var(--fs-family-orbitron);
+    font-family: 'Chakra Petch', sans-serif;
 }
 .navmenu-header .title-name{
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     line-height: 1;
 }
 .navmenu-header .title-job{
@@ -390,7 +396,6 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    gap: 10px;
 }
 .navmenu-body a{
     color: var(--body-font-color);
@@ -401,24 +406,28 @@ body{
     align-items: center;
     font-weight: 500;
     width: 100%;
-    border-radius: 5px;
     position: relative;
     z-index: 1;
+    transition: 0.35s cubic-bezier(0.6, 0.5, 0.5, 0.7);
+    border-bottom: 1px solid rgba(45, 45, 45, 0.3);
 }
 .navmenu-body a::before{
     position: absolute;
     content: "";
     top: 0;
     left: 0;
-    width: 0%;
+    width: 100%;
     height: 100%;
-    background-color: #232323;
+    background-color: transparent;
     border-radius: 5px;
     z-index: -1;
     transition: 0.35s cubic-bezier(0.6, 0.5, 0.5, 0.7);
 }
+.navmenu-body a:hover{
+    padding-left: 50px;
+}
 .navmenu-body a:hover::before{
-    width: 100%;
+    background-color: #232323;
 }
 
 .navmenu-body i{
@@ -490,11 +499,14 @@ body{
     }
 }
 .hero-name, .hero-jobtitle{
-    font-family: var(--fs-family-orbitron);
+    font-family: 'Chakra Petch', sans-serif;
+    line-height: 1;
 }
 .hero-name{
     font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 .hero-jobtitle{
     font-size: 1.5rem;
@@ -536,7 +548,7 @@ body{
 }
 
 .link-certificate{
-    color: var(--body-font-color);
+    color: #359dff;
     text-decoration: underline;
     margin-left: 10px;
     margin-right: 5px;
@@ -551,7 +563,7 @@ body{
     color: var(--body-font-grey);
 }
 .certificate-text a{
-    color: var(--body-font-color);
+    color: #359dff;
     font-weight: 500;
     text-decoration: underline;
 }
@@ -602,7 +614,7 @@ body{
     gap: 5px;
 }
 .hire i{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 /* =========================== END ABOUTME SECTION =========================== */
 
@@ -842,6 +854,9 @@ body{
     flex-direction: column;
     margin-left: 40px;
 }
+.resume-title{
+    margin-bottom: 5px;
+}
 .resume-date{
     color: var(--body-font-grey);
     margin-bottom: 5px;
@@ -903,9 +918,6 @@ body{
     left: -30px;
 }
 .form-section{
-    padding: 2rem;
-    background-color: var(--bg-color-section);
-    border-radius: 10px;
     margin: 0 auto;
     width: 100%;
 }
@@ -920,7 +932,7 @@ body{
     position: absolute;
     top: -10px;
     left: 20px;
-    background-color: var(--bg-color-section);
+    background-color: var(--body-color);
     padding: 0 10px;
     font-size: 0.8rem;
     color: var(--body-font-grey);
@@ -1135,6 +1147,9 @@ input[type=number] {
     }
 }
 @media screen and (max-width: 470px) {
+    .hero-name{
+        font-size: 2.5rem;
+    }
     .skills-bar-text{
         display: flex;
     }
@@ -1164,6 +1179,13 @@ input[type=number] {
     }
 }
 @media screen and (max-width: 420px) {
+    .hero-name{
+        font-size: 2rem;
+    } 
+    .hero-jobtitle{
+        font-size: 1.2rem;
+
+    }
     .skills-bar-text{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
