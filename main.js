@@ -45,6 +45,7 @@ const sidenavClose = document.getElementById("button-close-sidenav");
 
 }
 // GREETING TEXT
+// GREETING TEXT
 const time = new Date().getHours();
 let greeting;
 
