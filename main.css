@@ -205,7 +205,7 @@ body{
     transition: var(--transition);
 }
 .hover-icon:hover{
-    color: #264de4;
+    color: #2563eb;
     transform: scale(0.97);
 }
 .hr-style{
@@ -218,7 +218,7 @@ body{
 
 .logo{
     font-family: var(--fs-family-orbitron);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--body-font-color);
     font-weight: 800;
     display: inline-block;
@@ -243,7 +243,6 @@ body{
     gap: 20px;
 }
 .social-icon-navbar{
-    display: flex;
     gap: 5px;
 }
 .social-icon-navbar a{
@@ -299,11 +298,12 @@ body{
 }
 .hamburger-menu{
     position: absolute;
-    top: 25px;
+    top: 20px;
     width: 30px;
     height: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     z-index: -1;
 }
@@ -316,14 +316,17 @@ body{
     border-radius: 50px;
 }
 .hamburger-menu .line1{
+    width: 20px;
     transform-origin: 10% 100%;
 }
 .hamburger-menu .line3{
     transform-origin: 10% 0%;
+    width: 20px;
 }
 #toggle-checkbox:checked ~ .hamburger-menu .line1{
     transform: rotate(45deg);
     background-color: var(--body-font-color);
+    width: 30px;
 }
 #toggle-checkbox:checked ~ .hamburger-menu .line2{
     transform: scale(0);
@@ -331,6 +334,7 @@ body{
 #toggle-checkbox:checked ~ .hamburger-menu .line3{
     transform: rotate(-45deg);
     background-color: var(--body-font-color);
+    width: 30px;
 }
 .navOverlay{
     position: fixed;
@@ -592,7 +596,7 @@ body{
     transition: 0.35s cubic-bezier(0.6, 0.5, 0.5, 0.7);
 }
 .link-hover:hover{
-    border-color: #264de4;
+    border-color: #2563eb;
 }
 .link-hover::before{
     position: absolute;
@@ -601,7 +605,7 @@ body{
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: #264de4;
+    background-color: #2563eb;
     z-index: -1;
     transition: 0.35s cubic-bezier(0.6, 0.5, 0.5, 0.7);
     border-radius: 5px;
@@ -809,14 +813,15 @@ body{
     color: var(--body-font-grey);
 }
 /* =========================== END SKILLS =========================== */
+
 .resume-column{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 20px;
     position: relative;
+    width: 100%;
 }
-
 .resume-row{
     position: relative;
     margin-left: 30px;
@@ -894,7 +899,7 @@ body{
 .contact-item i{
     font-size: 1.5rem;
     border-radius: 5px;
-    background-color: #264de4;
+    background-color: #2563eb;
     padding: 1rem;
 }
 .contact-details p{
@@ -1067,9 +1072,6 @@ input[type=number] {
     .topNav{
         padding: 1rem 10px;
     }
-    .logo{
-        font-size: 1.7rem;
-    }
     .social-icon-navbar{
         display: none;
     }
@@ -1125,11 +1127,51 @@ input[type=number] {
     }
 
     /* END SKILLS */
+    .resume-scroll{
+        width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    .resume-row::before{
+        display: none;
+    }
     .resume-column{
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        scroll-snap-align: inherit;
+        gap: 20px;
+    }
+    .resume-icon{
+        left: 0;
+        position: inherit;
+        font-size: 1rem;
+    }
+    .resume-wrapper{
+        display: flex;
+        align-items: flex-start;
     }
     .resume-row{
-        margin-left: 10px;
+        flex: 0 0 95%;
+        flex-basis: 0 300px;
+        margin-left: 0;
+        border: 1px solid var(--body-font-grey);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    .resume-row:not(:last-child)::after{
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -15px;
+        width: 15px;
+        height: 15px;
+        background-color: #0D0D0D;
+        transform: rotate(45deg) translate(-50%, 0%);
+        border-right: 1px solid;
+        border-top: 1px solid;
+        z-index: 2;
+    }
+    .resume-content{
+        margin-left: 15px;
     }
     .contact-row{
         grid-template-columns: 1fr;
@@ -1153,19 +1195,19 @@ input[type=number] {
     .skills-bar-text{
         display: flex;
     }
-    .resume-column{
+    /* .resume-column{
         margin-left: 20px;
-    }
+    } */
     .resume-column .resume-row:first-child::before{
         display: none;
     }
     .resume-row::before{
         display: none;
     }
-    .resume-column{
+    /* .resume-column{
         grid-template-columns: 1fr;
-    }
-    .resume-column::before{
+    } */
+    /* .resume-column::before{
         position: absolute;
         content: "";
         top: 0;
@@ -1173,10 +1215,10 @@ input[type=number] {
         width: 1px;
         height: 100%;
         background-color: #373737
-    }
-    .resume-row{
+    } */
+    /* .resume-row{
         margin-left: 10px;
-    }
+    } */
 }
 @media screen and (max-width: 420px) {
     .hero-name{
